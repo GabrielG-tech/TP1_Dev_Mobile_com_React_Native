@@ -1,0 +1,22 @@
+npm expo --v                                        // Checar versão do expo
+npm i -g expo                                       // Global install expo
+npx create-expo-app nome-projeto                    // Criação de um prpjeto React Native
+cd nome-projeto                                     // Selecionar projeto
+npx expo start                                      // Iniciar projeto
+ctrl + c                                            // Sair do menu expo
+
+npx expo install react-native-web@~0.18.10          // | Baixar dependencias para abrir projeto web
+react-dom@18.2.0 @expo/webpack-config@^18.0.1       // |
+
+npm install @react-navigation/native                // | Instala dependencias para nav de pag
+npx expo install react-native-screens               // |
+npx expo install react-native-safe-area-context     // |
+npm install @react-navigation/native-stack          // |
+
+clear                                               // Limpa o terminal
+
+npm install @react-navigation/bottom-tabs           // | Components botao e drawer
+@react-navigation/drawer                            // |
+npx expo install react-native-gesture-handler       // |
+npx expo install react-native-reanimated            // |
+
