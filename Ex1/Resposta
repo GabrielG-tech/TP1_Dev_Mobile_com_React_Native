@@ -1,0 +1,7 @@
+Com o React Native obtemos aplicativos que podem ser visualizados na Web, Android e IOs.
+Explique o que ocorre com o React Native para que a execução seja possível para várias plataformas:
+
+Resposta: O React Native é uma estrutura de desenvolvimento baseada na biblioteca JavaScript chamada React,
+ele acessa os recursos direto dos dispositivos a partir de um único código-fonte
+por meio de API's disponibilizadas pelos proprios frabicantes, possuindo também recusos
+de compatibilidade hibrida e nativa com os demais sistemas (Web, Android e IOs).
