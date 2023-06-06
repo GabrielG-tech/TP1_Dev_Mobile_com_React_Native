@@ -17,3 +17,40 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+
+export default function App() {
+  const [buttonPressed, setButtonPressed] = useState('');
+
+  const handleButtonPress = (buttonLabel) => {
+    setButtonPressed(buttonLabel);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Botão pressionado: {buttonPressed}</Text>
+      <View style={styles.buttonContainer}>
+        <Button title="Sim" onPress={() => handleButtonPress('Sim')} />
+        <Button title="Não" onPress={() => handleButtonPress('Não')} />
+        <Button title="Talvez" onPress={() => handleButtonPress('Talvez')} />
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 18,
+    marginBottom: 20,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+  },
+});
