@@ -14,17 +14,17 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={incrementar}>
-        <Text style={styles.btn}>+</Text>
-      </TouchableOpacity>
-
       <Text style={styles.count}>{count}</Text>
 
-      <TouchableOpacity onPress={decrementar}>
-        <Text style={styles.btn}>-</Text>
-      </TouchableOpacity>
+      <View style={styles.btns}>
+        <TouchableOpacity onPress={decrementar}>
+          <Text style={styles.btn}>-</Text>
+        </TouchableOpacity>
 
-      <View style={styles.btns}></View>
+        <TouchableOpacity onPress={incrementar}>
+          <Text style={styles.btn}>+</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -32,7 +32,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'lightcyan',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -40,10 +40,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   btn: {
-    fontSize: 24,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    backgroundColor: '#993399',
+    flex: 1,
+    textAlign: 'center',
+    fontSize: 46,
+    paddingBottom: 4,
+    margin: 4,
+    marginHorizontal: 6,
+    width: 160,
+    height: 80,
+    backgroundColor: '#fff',
+    borderWidth: 2,
+    borderColor: '#000',
+    borderRadius: 8,
     marginVertical: 10,
   },
   count: {
