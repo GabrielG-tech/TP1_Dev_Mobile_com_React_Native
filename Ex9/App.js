@@ -1,11 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+
+function CardMovie(filme, imagem, horario) {
+  return (
+    <View>
+      <Text>{filme}</Text>
+      <Image />
+      <Text>{horario}</Text>
+    </View>
+  )
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>A fazer...</Text>
-      <StatusBar style="auto" />
+      <CardMovie />
     </View>
   );
 }
