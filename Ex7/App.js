@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   const [contagem, setContagem] = useState(0);
@@ -17,13 +17,13 @@ export default function App() {
       <Text style={styles.contagem}>{contagem}</Text>
 
       <View style={styles.btns}>
-        <TouchableOpacity onPress={decrementar}>
+        <Pressable onPressIn={decrementar}>
           <Text style={styles.btn}>-</Text>
-        </TouchableOpacity>
+        </Pressable>
 
-        <TouchableOpacity onPress={incrementar}>
+        <Pressable onPressIn={incrementar}>
           <Text style={styles.btn}>+</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </View>
   );
