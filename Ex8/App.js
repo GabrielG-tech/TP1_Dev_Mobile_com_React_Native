@@ -9,7 +9,7 @@ export default function App() {
       <FlatList
         style={styles.lista}
         data={data}
-        renderItem={({item}) => <Text>{item} </Text>}
+        renderItem={({item}) => <Text>{item.id} - {item} </Text>}
         keyExtractor={item => item.id}
       />
     </View>

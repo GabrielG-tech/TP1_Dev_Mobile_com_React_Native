@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import imag from './BlackPanther.jpg'
 
-function CardMovie(filme, imagem, horario) {
-  let img = require(imagem).toString()
+function CardMovie({filme, img, horario}) {
   return (
-    <View>
-      <Text>{filme}</Text>
+    <View style={styles.card}>
+      <Text style={styles.texto}>{filme}</Text>
       <Image
         style={styles.imagem}
-        source={img}/>
-      <Text>{horario}</Text>
+        source={{ uri: img }} />
+      <Text style={styles.texto}>{horario}</Text>
     </View>
   )
 }
@@ -16,7 +16,9 @@ function CardMovie(filme, imagem, horario) {
 export default function App() {
   return (
     <View style={styles.container}>
-      <CardMovie filme='Pantera Negra' imagem='./assets/BlackPanther.jpg' horario='17:30' />
+      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' />
+      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' />
+      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' />
     </View>
   );
 }
@@ -24,12 +26,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: 'row',
+    backgroundColor: '#c0c0c0',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  imagem: {
-    width: 80,
-    height: 120,
+  card: {
+    margin: 8,
   },
+  imagem: {
+    width: 240,
+    height: 360,
+  },
+  texto: {
+    fontSize: 36,
+  }
 });
