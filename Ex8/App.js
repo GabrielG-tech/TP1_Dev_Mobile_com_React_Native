@@ -1,16 +1,19 @@
+import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
-import { useState, useEffect } from 'react';
 
 export default function App() {
   const data = ['John', 'Paul', 'Ringo', 'George'];
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Membros dos Beatles</Text>
       <FlatList
         style={styles.lista}
         data={data}
-        renderItem={({item}) => <Text>{item.id} - {item} </Text>}
-        keyExtractor={item => item.id}
+        renderItem={({ item, index }) => (
+          <Text>{index + 1} - {item}</Text>
+        )}
+        keyExtractor={(index) => index.toString()}
       />
     </View>
   );
