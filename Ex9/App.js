@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import imag from './BlackPanther.jpg'
 
-function CardMovie({filme, img, horario}) {
+function CardMovie({filme, img, horario, cinema}) {
   return (
     <View style={styles.card}>
       <Text style={styles.texto}>{filme}</Text>
@@ -9,6 +9,7 @@ function CardMovie({filme, img, horario}) {
         style={styles.imagem}
         source={{ uri: img }} />
       <Text style={styles.texto}>{horario}</Text>
+      <Text style={styles.texto}>{cinema}</Text>
     </View>
   )
 }
@@ -16,9 +17,9 @@ function CardMovie({filme, img, horario}) {
 export default function App() {
   return (
     <View style={styles.container}>
-      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' />
-      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' />
-      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' />
+      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' cinema='Kinoplex' />
+      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' cinema='Kinoplex' />
+      <CardMovie filme='Pantera Negra' img={require('./BlackPanther.jpg')} horario='17:30' cinema='Kinoplex' />
     </View>
   );
 }
